@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trending Repos </title>
+    </head>
+    <body>
+        
+        {% for lang, repos in lang_repo.items %}
+            <h1>{{lang}}</h1>
+            <p> Number of Repos using {{lang}}: {{repos|length}}</p>
+            <h3>Repos </h3>
+            <ul>
+                {%for repo in repos%}
+                    <li> {{repo}} </li>
+                {%endfor%}
+            </ul>
+        {%endfor%}
+    </body>
+</html>
