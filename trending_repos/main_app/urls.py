@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from . import main_logic
 app_name = 'main_app'
 urlpatterns = [
-    path("",views.index, name="index"),
+    path("",main_logic.index, name="index"),
 ]
